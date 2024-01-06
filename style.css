@@ -6,9 +6,14 @@
 
 body{
     width: 100vw;
-    height: fit-content;
+    height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: center;
+
+    @media screen and (width <= 768px){
+        height: fit-content;
+    }
 
     & video{
         width: 100%;
@@ -19,10 +24,8 @@ body{
         object-fit: cover;
 
         @media(min-aspect-ratio: 16/9){
-            video{
-                width: 100%;
-                height: auto;
-            }
+            width: 100%;
+            height: auto;
         }
     }
 
@@ -44,6 +47,7 @@ body{
     }
     .container div{
         width: 6em;
+        height: 20em;
         border-radius: 50px;
         background-position: center;
         background-size: cover;
